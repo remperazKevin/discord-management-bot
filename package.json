@@ -1,0 +1,18 @@
+{
+  "name": "discord-management-bot",
+  "version": "1.0.0",
+  "description": "Limited and edited code replica of HoloHub Discord Management Bot.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "Kevin Remperas, HoloHub Management",
+  "license": "MIT",
+  "dependencies": {
+    "eslint": "^7.28.0",
+    "node": "15.12",
+    "npm": "^7.17.0"
+  }
+}

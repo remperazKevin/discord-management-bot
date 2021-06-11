@@ -1,0 +1,6 @@
+config
+node_modules
+private
+.env
+.eslintrc.json
+.markdownlint.json
