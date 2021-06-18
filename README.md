@@ -1,6 +1,6 @@
 # Discord Management Bot
 
-> This is a **LIMITED** and **EDITED** code replica of [**HoloHub Discord Management Bot**](https://remperazkevin.github.io/holohub.github.io/)
+> Stripped down version of [**HoloHub Discord Management Bot**](https://remperazkevin.github.io/holohub.github.io/)
 
 - - -
 
