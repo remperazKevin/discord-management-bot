@@ -20,16 +20,19 @@ module.exports = {
 
 			await webhook.send(embed).then(() => {
 				const fs = require('fs');
-				const server_FileName = message.guild.name.split(' ').slice(0).join('_');
-				const serverProperties = {
-					serverArrivals: true,
+				const serverName = message.guild.name.split(' ').slice(0).join('_');
+				const configParam = {
 					webhookID: webhook.id,
 					webhookToken: webhook.token,
 					webhookGuildID: webhook.guildID,
 				};
-				fs.writeFile(`./config/${server_FileName}_arrivals.json`, JSON.stringify(serverProperties, null, 4), (err) => {
-					if (err) return console.error(err);
-					console.log(`${server_FileName}_arrivals.json has been created`);
+				// eslint-disable-next-line space-before-function-paren
+				fs.mkdir(`./config/${serverName}`, function () {
+					// eslint-disable-next-line max-nested-callbacks
+					fs.writeFile(`./config/${serverName}/config_serverArrivals.json`, JSON.stringify(configParam, null, 4), (err) => {
+						if (err) return console.error(err);
+						console.log(`./config/${serverName}/config_serverArrivals.json has been created`);
+					});
 				});
 			});
 		});

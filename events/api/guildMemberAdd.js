@@ -14,15 +14,21 @@ module.exports = {
 			.setFooter(`User ID: ${member.id}`);
 
 		const fs = require('fs');
-		const server_configFiles = fs.readdirSync('./config/').filter(file => file.endsWith('.json'));
-		for (const serverConfig of server_configFiles) {
+		const server_configFolders = fs.readdirSync('./config');
+		for (const folder of server_configFolders) {
 			const serverName = member.guild.name.split(' ').slice(0).join('_');
-			const serverFile = serverConfig.split('.')[0];
-			const server = require(`../../config/${serverConfig}`);
-			if (serverFile === serverName) {
-				if (member.guild.id === server.webhookGuildID) {
-					const webhookClient = new WebhookClient(server.webhookID, server.webhookToken);
-					return await webhookClient.send(newMember);
+			if (folder === serverName) {
+				const server_configFiles = fs.readdirSync(`./config/${folder}`).filter(file => file.endsWith('.json'));
+				for (const file of server_configFiles) {
+					const config_File = file.split('.')[0];
+					if (config_File === 'config_serverLogging') {
+						const serverConfig = require(`../../config/${folder}/${file}`);
+						if (member.guild.id === serverConfig.webhookGuildID) {
+							const webhookClient = new WebhookClient(serverConfig.webhookID, serverConfig.webhookToken);
+							await webhookClient.send(newMember);
+							return member.setNickname('Unverified');
+						}
+					}
 				}
 			}
 		}

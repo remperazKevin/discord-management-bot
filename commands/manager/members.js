@@ -5,7 +5,7 @@ module.exports = {
 	name: 'members',
 	description: 'List members in a role(s)',
 	aliases: ['members'],
-	usage: '[role]',
+	usage: '',
 	guildOnly: true,
 	permissions: 'MANAGE_ROLES',
 	async execute(message, args) {
