@@ -1,6 +1,6 @@
 # Discord Management Bot
 
-> Stripped down version of [**HoloHub Discord Management Bot**](https://remperazkevin.github.io/holohub.github.io/)
+> Stripped down version of [**HoloHub Discord Management Bot**](https://holohub-community.github.io/)
 
 - - -
 
