@@ -108,15 +108,19 @@
 
 - **Channel Create**
 - **Channel Delete**
-- **~~Channel Pins Update~~ [-!]**
+- **~~Channel Pins Update~~ [^1]**
 - **Channel Update**
 - **Guild Ban**
 - **Guild Unban**
 - **Guild New Member**
 - **Guild Left Member**
 - **Guild Update Member**
-- **~~Message Delete~~ [-!]**
+- **~~Message Delete~~ [^1]**
 - **Message Bulk Delete**
 - **Role Create**
 - **Role Delete**
 - **Voice State**
+
+- - -
+
+[^1] Cannot be logged due to API limitations
