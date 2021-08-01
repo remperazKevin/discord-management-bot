@@ -1,4 +1,4 @@
-# Discord Management Bot
+# HoloHub Lite
 
 > Stripped down version of [**HoloHub Discord Management Bot**](https://holohub-community.github.io/)
 
