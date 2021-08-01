@@ -123,4 +123,4 @@
 
 - - -
 
-[^1] Cannot be logged due to API limitations
+[^1]: Cannot be logged due to API limitations
