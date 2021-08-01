@@ -6,8 +6,6 @@
 
 ## Bot Functions
 
-> **[-!]** Marked feature(s) have conflict with current code structure
-
 ### List of Commands
 
 <details>
